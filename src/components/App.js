@@ -27,9 +27,9 @@ class LambdaDemo extends Component {
   }
 }
 
-function Product({ hit }) {
+function HitItem({ hit }) {
   return (
-    <div style={{ marginTop: '10px' }}>
+    <div class='hit-item' style={{ marginTop: '10px' }}>
       <span className="hit-name">
         <Highlight attribute="name" hit={hit} />
         <div>{hit.local_date}</div>
@@ -55,7 +55,7 @@ class App extends Component {
         >
           <SearchBox />
           <div className="container">
-            <Hits hitComponent={Product} />
+            <Hits hitComponent={HitItem} />
           </div>
         </InstantSearch>
       </div>
