@@ -32,6 +32,7 @@ function Product({ hit }) {
     <div style={{ marginTop: '10px' }}>
       <span className="hit-name">
         <Highlight attribute="name" hit={hit} />
+        <div>{hit.local_date}</div>
       </span>
     </div>
   );
