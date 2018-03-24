@@ -1,16 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
-import { InstantSearch, Hits, Highlight, SearchBox } from 'react-instantsearch/dom';
-
-function Product({ hit }) {
-  return (
-    <div style={{ marginTop: '10px' }}>
-      <span className="hit-name">
-        <Highlight attribute="name" hit={hit} />
-      </span>
-    </div>
-  );
-}
+import { InstantSearch, Hits, SearchBox } from 'react-instantsearch/dom';
+import Product from './Product';
 
 class App extends Component {
   render() {
@@ -20,9 +11,6 @@ class App extends Component {
           <h1 className="App-title">Welcome to React</h1>
         </header>
 
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
         <InstantSearch
           appId="8AOQAW9EZA"
           apiKey="8caaee2531c0957918fc460b01e2acbb"
