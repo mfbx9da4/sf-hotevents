@@ -28,11 +28,16 @@ class LambdaDemo extends Component {
 }
 
 function HitItem({ hit }) {
+  console.log(hit);
   return (
-    <div class='hit-item' style={{ marginTop: '10px' }}>
+    <div className='hit-item' style={{ marginTop: '10px' }}>
       <span className="hit-name">
         <Highlight attribute="name" hit={hit} />
-        <div>{hit.local_date}</div>
+        {(hit.percent_full) ? <div>Capacity {hit.percent_full}%</div>: <div>No Capacity</div> }
+        <div>Going {hit.yes_rsvp_count}</div>
+        <div>{hit.local_date} {hit.local_time}</div>
+        <a href={hit.link} target="_blank">{hit.link}</a>
+
       </span>
     </div>
   );
