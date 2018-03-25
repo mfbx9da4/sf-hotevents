@@ -1,7 +1,3 @@
-* {
-  /*border: solid black 1px;*/
-}
-
 em {
   font-style: normal;
 }
@@ -12,21 +8,12 @@ em {
 }
 
 .App-header {
-  background-color: #222;
   height: 150px;
   padding: 20px;
-  color: white;
 }
 
 .App-title {
-  font-size: 1.5em;
-}
-
-.App-intro {
-  font-size: large;
-}
-
-.container {
+  font-size: 3.5em;
 }
 
 .ais-Hits-list {
