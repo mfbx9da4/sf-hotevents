@@ -3,7 +3,9 @@ import {createConnector} from 'react-instantsearch';
 
 /**
  * This file provides a reference for how to implement any type of widget
- *
+ * Taken from
+ * https://community.algolia.com/react-instantsearch/guide/Custom_connectors.html#getsearchparameterssearchparameters-props-searchstate
+ * https://jsfiddle.net/wkjyev3p/8/
  */
 
 const CoolWidget = createConnector({
