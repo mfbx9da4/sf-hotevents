@@ -15,9 +15,7 @@ const MapContainer = createConnector({
     }
   }
 })(props =>
-  <div>
-    Render map here
-    <pre>{props.searchResults.results && JSON.stringify(props.searchResults.results.hits.map(x => x.venue && ('Lat ' + x.venue.lat + ', Lon ' + x.venue.lon)))}</pre>
+  <div className="map">
     <MapView {...props} />
   </div>
 );

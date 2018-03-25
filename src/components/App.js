@@ -31,9 +31,9 @@ class App extends Component {
           indexName="sf-events"
         >
           <SearchBox />
-          <MapContainer></MapContainer>
           <div className="container">
-            <Hits hitComponent={HitItem} />
+            <MapContainer></MapContainer>
+            <Hits hitComponent={HitItem} className="events-list"/>
           </div>
         </InstantSearch>
       </div>
