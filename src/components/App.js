@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
 import { InstantSearch, Hits, Highlight, SearchBox } from 'react-instantsearch/dom';
-import Product from './Product';
 import MapContainer from './MapContainer';
 
 function HitItem({ hit }) {
@@ -9,8 +8,8 @@ function HitItem({ hit }) {
     <div className='hit-item'>
       <Highlight className='title' attribute="name" hit={hit} />
       <div className='hit-name-sub'>
-        {(hit.percent_full) ? <span className="hit-name-sub-capacity">Capacity {hit.percent_full}% </span> : <span className="hit-name-sub-capacity">Capacity</span> }
-        <span className="hit-name-sub-attendance">Going {hit.yes_rsvp_count} </span>
+        {(hit.percent_full) ? <span className="hit-name-sub-capacity">Capacity: {hit.percent_full}% </span> : <span className="hit-name-sub-capacity">Capacity: N/A </span> }
+        <span className="hit-name-sub-attendance">Going: {hit.yes_rsvp_count} </span>
         <span className="hit-name-sub-date">{hit.local_date} {hit.local_time} </span>
       </div>
     </div>
