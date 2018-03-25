@@ -3,6 +3,7 @@ import './App.css';
 import { InstantSearch, Hits, Highlight, SearchBox } from 'react-instantsearch/dom';
 import Product from './Product';
 import MapContainer from './MapContainer';
+import {ListGroup, ListGroupItem} from 'react-bootstrap';
 
 function HitItem({ hit }) {
   return (
@@ -32,9 +33,9 @@ class App extends Component {
         >
           <SearchBox />
           <MapContainer></MapContainer>
-          <div className="container">
+          <ListGroup className="container">
             <Hits hitComponent={HitItem} />
-          </div>
+          </ListGroup>
         </InstantSearch>
       </div>
     );
