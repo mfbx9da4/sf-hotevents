@@ -15,7 +15,7 @@ const MapContainer = createConnector({
     }
   }
 })(props =>
-  <div>
+  <div className="map">
     <MapView {...props} />
   </div>
 );

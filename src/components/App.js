@@ -32,14 +32,13 @@ class App extends Component {
 			indexName="sf-events"
 			>
 				<SearchBox/>
-
-				<MapContainer/>
-				<div className="container">
-					<Hits hitComponent={HitItem} />
-				</div>
-			</InstantSearch>
-		</div>
-	);
+          <div className="container">
+            <MapContainer></MapContainer>
+            <Hits hitComponent={HitItem} className="events-list"/>
+          </div>
+        </InstantSearch>
+      </div>
+    );
   }
 }
 

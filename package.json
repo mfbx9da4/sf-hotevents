@@ -12,7 +12,10 @@
     "netlify-lambda": "^0.3.0",
     "react": "^16.2.0",
     "react-bootstrap": "^0.32.1",
+<<<<<<< HEAD
     "react-bootstrap-grid": "^1.0.0",
+=======
+>>>>>>> 10da30f29743e204c412edfec78ea4ff5249277e
     "react-dom": "^16.2.0",
     "react-google-maps": "^9.4.5",
     "react-instantsearch": "^5.0.1",

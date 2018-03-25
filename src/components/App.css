@@ -77,3 +77,20 @@ em {
   font-size: 1em;
   margin-right: 15px;
 }
+
+.container {
+  display: flex;
+  height: 600px;
+  width: 100vw;
+}
+
+.events-list {
+  order: 1;
+  overflow-y: auto;
+  width: 400px;
+}
+
+.map {
+  order: 2;
+  width: 50%;
+}

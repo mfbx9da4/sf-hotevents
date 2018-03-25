@@ -18,7 +18,7 @@ const MapWithAMarker = withScriptjs(withGoogleMap(props =>
       // console.log("event", event);
 
       if(event.venue){
-        return <Marker key={i} 
+        return <Marker key={i}
         label={event.percent_full + '%'}
         opacity={event.percent}
         position={{ lat: event.venue.lat, lng: event.venue.lon }} />
@@ -47,7 +47,6 @@ class MapView extends Component {
 
     const hits = this.props.searchResults && this.props.searchResults.results && this.props.searchResults.results.hits
     return <div>
-      hits{JSON.stringify(hits && hits.length)}
       <MapWithAMarker
       googleMapURL="https://maps.googleapis.com/maps/api/js?key=AIzaSyC4R6AN7SmujjPUIGKdyao2Kqitzr1kiRg&v=3.exp&libraries=geometry,drawing,places"
       loadingElement={<div style={{ height: `100%` }} />}
@@ -55,7 +54,7 @@ class MapView extends Component {
       mapElement={<div style={{ height: `100%` }} />}>
       hits={hits}
       </MapWithAMarker>
-    </div>  
+    </div>
   }
 }
 
