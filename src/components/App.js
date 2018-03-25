@@ -1,29 +1,21 @@
 import React, { Component } from 'react';
 import './App.css';
+import { InstantSearch, Hits, Highlight, SearchBox } from 'react-instantsearch/dom';
+import Product from './Product';
+import MapContainer from './MapContainer';
 
-class LambdaDemo extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {loading: false, msg: null};
-  }
-
-  handleClick = (e) => {
-    e.preventDefault();
-
-    this.setState({loading: true});
-    fetch('/.netlify/functions/hello')
-      .then(response => response.json())
-      .then(json => this.setState({loading: false, msg: json.msg}));
-  }
-
-  render() {
-    const {loading, msg} = this.state;
-
-    return <p>
-      <button onClick={this.handleClick}>{loading ? 'Loading...' : 'Call Lambda'}</button><br/>
-      <span>{msg}</span>
-    </p>
-  }
+function HitItem({ hit }) {
+  console.log(hit);
+  return (
+    <div className='hit-item'>
+      <Highlight className='title' attribute="name" hit={hit} />
+      <div className='hit-name-sub'>
+        {(hit.percent_full) ? <span className="hit-name-sub-capacity">Capacity {hit.percent_full}% </span> : <span className="hit-name-sub-capacity">Capacity</span> }
+        <span className="hit-name-sub-attendance">Going {hit.yes_rsvp_count} </span>
+        <span className="hit-name-sub-date">{hit.local_date} {hit.local_time} </span>
+      </div>
+    </div>
+  );
 }
 
 class App extends Component {
@@ -33,10 +25,18 @@ class App extends Component {
         <header className="App-header">
           <h1 className="App-title">Welcome to React</h1>
         </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
-        <LambdaDemo/>
+
+        <InstantSearch
+          appId="8AOQAW9EZA"
+          apiKey="8caaee2531c0957918fc460b01e2acbb"
+          indexName="sf-events"
+        >
+          <SearchBox />
+          <MapContainer></MapContainer>
+          <div className="container">
+            <Hits hitComponent={HitItem} />
+          </div>
+        </InstantSearch>
       </div>
     );
   }

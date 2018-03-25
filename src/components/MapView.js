@@ -34,6 +34,7 @@ class MapView extends Component {
   }
 
   render() {
+<<<<<<< HEAD
     const {loading, msg} = this.state;
     return <MapWithAMarker
       googleMapURL="https://maps.googleapis.com/maps/api/js?key=AIzaSyC4R6AN7SmujjPUIGKdyao2Kqitzr1kiRg&v=3.exp&libraries=geometry,drawing,places"
@@ -41,6 +42,11 @@ class MapView extends Component {
       containerElement={<div style={{ height: `400px` }} />}
       mapElement={<div style={{ height: `100%` }} />}>
       </MapWithAMarker>
+=======
+    return <p>
+      Map
+    </p>
+>>>>>>> a66a39bc02fabbe3a4eb296793fd3ef1fda98330
   }
 }
 
