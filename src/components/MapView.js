@@ -6,23 +6,24 @@ import {
   GoogleMap,
   Marker,
 } from "react-google-maps";
-import data from "../data/latsAndLons.json";
 
 const MapWithAMarker = withScriptjs(withGoogleMap(props =>
   <GoogleMap
     defaultZoom={13}
     defaultCenter={{ lat: 37.7749, lng: -122.4194 }}
   >
-  {console.log('child',props.children)}
+
   {
     props.children[1] && props.children[1].map(function(event, i){
-      console.log("event", event);
-      let percent = 0.7
+      // console.log("event", event);
+
       if(event.venue){
         return <Marker key={i} 
         label={event.percent_full + '%'}
         opacity={event.percent}
         position={{ lat: event.venue.lat, lng: event.venue.lon }} />
+      } else {
+      	return undefined;
       }
     })
   }
@@ -42,8 +43,8 @@ class MapView extends Component {
   }
 
   render() {
-    console.log("props ", this.props)
-    const {loading, msg} = this.state;
+    // console.log("props ", this.props);
+
     const hits = this.props.searchResults && this.props.searchResults.results && this.props.searchResults.results.hits
     return <div>
       hits{JSON.stringify(hits && hits.length)}

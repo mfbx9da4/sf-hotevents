@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import {createConnector} from 'react-instantsearch';
 import MapView from './MapView';
 
@@ -7,7 +7,7 @@ const MapContainer = createConnector({
 
   getProvidedProps(props, searchState, searchResults, meta, searchForFacetValuesResults) {
     const [query, page] = searchState.queryAndPage || ['', 0];
-    console.info('searchResults', searchResults.results);
+
     return {
       query,
       page,
