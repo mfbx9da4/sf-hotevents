@@ -13,8 +13,6 @@ class TimeView extends Component {
   }
 
   render() {
-    const {loading, msg} = this.state;
-
     return <p>
       Timeline
     </p>
