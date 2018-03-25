@@ -1,3 +1,7 @@
+* {
+  box-sizing: border-box;
+}
+
 em {
   font-style: normal;
 }
@@ -8,31 +12,45 @@ em {
 }
 
 .App-header {
-  height: 150px;
-  padding: 20px;
+  height: 50px;
 }
 
 .App-title {
   font-size: 3.5em;
 }
 
+.ais-SearchBox {
+  margin: 50px auto;
+  width: 50%;
+}
+
 .ais-Hits-list {
   flex-direction: column;
-  margin-top: 1rem;
+}
+
+.ais-Hits-list:first-child {
+  padding-top: 20px;
 }
 
 .ais-Hits-item {
+  border: none;
   display: flex;
   width: 100%;
   box-shadow: none;
   margin-top: 0px;
-  border: none;
-  padding: 0.5rem;
+  margin-bottom: 15px;
+}
+
+.ais-Hits-item:hover {
+  background: #EEE;
+  cursor: pointer;
 }
 
 .title > span {
   font-size: 1.2em !important;
+  margin-bottom: 5px;
 }
+
 .ais-Highlight {
   display: flex;
   text-align: left;
@@ -40,9 +58,8 @@ em {
 
 }
 
-.ais-Highlight-nonHighlighted {
-  /*color: black;*/
-  /*font-size: 1.3em;*/
+.ais-Highlight-Highlighted {
+  font-style: normal;
 }
 
 .hit-item {
@@ -51,46 +68,44 @@ em {
 }
 
 .hit-name-sub {
-  display: flex;
   align-items: flex-start;
-  /*width: 350px;
-  justify-content: space-between;*/
-
-  /*justify-content: flex-start | flex-end | center | space-between | space-around | space-evenly;*/
-
+  display: flex;
 }
 
 .hit-name-sub-capacity {
   color: #828282;
   font-size: 1em;
-  margin-right: 15px;
+  margin-right: 20px;
 }
 
 .hit-name-sub-attendance {
   color: #828282;
   font-size: 1em;
-  margin-right: 15px;
+  margin-right: 20px;
 }
 
 .hit-name-sub-date {
   color: #828282;
   font-size: 1em;
-  margin-right: 15px;
+  margin-right: 20px;
 }
 
 .container {
   display: flex;
-  height: 600px;
-  width: 100vw;
+  height: 550px;
+  width: 100%;
 }
 
 .events-list {
+  height: 500px;
   order: 1;
   overflow-y: auto;
-  width: 400px;
+  padding-left: 5px;
+  padding-right: 20px;
+  width: 40%;
 }
 
 .map {
   order: 2;
-  width: 50%;
+  width: 60%;
 }
