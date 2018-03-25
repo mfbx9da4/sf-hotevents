@@ -1,5 +1,14 @@
+* {
+  /*border: solid black 1px;*/
+}
+
+em {
+  font-style: normal;
+}
+
 .App {
   text-align: center;
+  margin: 0 2rem;
 }
 
 .App-header {
@@ -17,12 +26,67 @@
   font-size: large;
 }
 
+.container {
+}
+
 .ais-Hits-list {
   flex-direction: column;
+  margin-top: 1rem;
 }
 
 .ais-Hits-item {
-  display: inline-block;
-  width: auto;
+  display: flex;
+  width: 100%;
   box-shadow: none;
+  margin-top: 0px;
+  border: none;
+  padding: 0.5rem;
+}
+
+.title > span {
+  font-size: 1.2em !important;
+}
+.ais-Highlight {
+  display: flex;
+  text-align: left;
+  margin-bottom: 3px;
+
+}
+
+.ais-Highlight-nonHighlighted {
+  /*color: black;*/
+  /*font-size: 1.3em;*/
+}
+
+.hit-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.hit-name-sub {
+  display: flex;
+  align-items: flex-start;
+  /*width: 350px;
+  justify-content: space-between;*/
+
+  /*justify-content: flex-start | flex-end | center | space-between | space-around | space-evenly;*/
+
+}
+
+.hit-name-sub-capacity {
+  color: #828282;
+  font-size: 1em;
+  margin-right: 15px;
+}
+
+.hit-name-sub-attendance {
+  color: #828282;
+  font-size: 1em;
+  margin-right: 15px;
+}
+
+.hit-name-sub-date {
+  color: #828282;
+  font-size: 1em;
+  margin-right: 15px;
 }
