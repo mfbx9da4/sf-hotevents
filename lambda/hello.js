@@ -60,11 +60,17 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
+<<<<<<< HEAD
+/******/ 	return __webpack_require__(__webpack_require__.s = 0);
+=======
 /******/ 	return __webpack_require__(__webpack_require__.s = 10);
+>>>>>>> a66a39bc02fabbe3a4eb296793fd3ef1fda98330
 /******/ })
 /************************************************************************/
 /******/ ([
 /* 0 */
+<<<<<<< HEAD
+=======
 /***/ (function(module, exports) {
 
 module.exports = require("buffer");
@@ -560,11 +566,26 @@ __webpack_require__(41).inherits(FetchError, Error);
 
 /***/ }),
 /* 10 */
+>>>>>>> a66a39bc02fabbe3a4eb296793fd3ef1fda98330
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
+<<<<<<< HEAD
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.handler = handler;
+function handler(event, context, callback) {
+  console.log(event);
+  callback(null, {
+    statusCode: 200,
+    body: JSON.stringify({ msg: "Hello, World!" })
+  });
+}
+
+=======
 let handler = (() => {
   var _ref2 = _asyncToGenerator(function* (event, context, callback) {
 
@@ -23084,5 +23105,6 @@ module.exports = function (x) {
 };
 
 
+>>>>>>> a66a39bc02fabbe3a4eb296793fd3ef1fda98330
 /***/ })
 /******/ ])));
