@@ -13,9 +13,17 @@ const MapWithAMarker = withScriptjs(withGoogleMap(props =>
     defaultZoom={13}
     defaultCenter={{ lat: 37.7749, lng: -122.4194 }}
   >
+  {console.log('child',props.children)}
   {
-    data.map(function(event, i){
-      return <Marker key={i} position={{ lat: event.lat, lng: event.lon }} />
+    props.children[1] && props.children[1].map(function(event, i){
+      console.log("event", event);
+      let percent = 0.7
+      if(event.venue){
+        return <Marker key={i} 
+        label={event.percent_full + '%'}
+        opacity={event.percent}
+        position={{ lat: event.venue.lat, lng: event.venue.lon }} />
+      }
     })
   }
   </GoogleMap>
@@ -34,19 +42,19 @@ class MapView extends Component {
   }
 
   render() {
-<<<<<<< HEAD
+    console.log("props ", this.props)
     const {loading, msg} = this.state;
-    return <MapWithAMarker
+    const hits = this.props.searchResults && this.props.searchResults.results && this.props.searchResults.results.hits
+    return <div>
+      hits{JSON.stringify(hits && hits.length)}
+      <MapWithAMarker
       googleMapURL="https://maps.googleapis.com/maps/api/js?key=AIzaSyC4R6AN7SmujjPUIGKdyao2Kqitzr1kiRg&v=3.exp&libraries=geometry,drawing,places"
       loadingElement={<div style={{ height: `100%` }} />}
       containerElement={<div style={{ height: `400px` }} />}
       mapElement={<div style={{ height: `100%` }} />}>
+      hits={hits}
       </MapWithAMarker>
-=======
-    return <p>
-      Map
-    </p>
->>>>>>> a66a39bc02fabbe3a4eb296793fd3ef1fda98330
+    </div>  
   }
 }
 

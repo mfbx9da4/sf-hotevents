@@ -5,7 +5,6 @@ import Product from './Product';
 import MapContainer from './MapContainer';
 
 function HitItem({ hit }) {
-  console.log(hit);
   return (
     <div className='hit-item'>
       <Highlight className='title' attribute="name" hit={hit} />
