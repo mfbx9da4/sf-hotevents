@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 import { InstantSearch, Hits, SearchBox } from 'react-instantsearch/dom';
 import Product from './Product';
-import Connector from './Connector';
+import MapContainer from './MapContainer';
 
 class App extends Component {
   render() {
@@ -18,7 +18,7 @@ class App extends Component {
           indexName="sf-events"
         >
           <SearchBox />
-          <Connector></Connector>
+          <MapContainer></MapContainer>
           <div className="container">
             <Hits hitComponent={Product} />
           </div>
