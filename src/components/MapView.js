@@ -42,8 +42,6 @@ class MapView extends Component {
   }
 
   render() {
-    // console.log("props ", this.props);
-
     const hits = this.props.searchResults && this.props.searchResults.results && this.props.searchResults.results.hits
     return <div>
       <MapWithAMarker
