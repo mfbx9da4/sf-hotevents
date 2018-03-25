@@ -17,5 +17,12 @@
   font-size: large;
 }
 
+.ais-Hits-list {
+  flex-direction: column;
+}
+
 .ais-Hits-item {
+  display: inline-block;
+  width: auto;
+  box-shadow: none;
 }
