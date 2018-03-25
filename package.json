@@ -4,6 +4,9 @@
   "private": true,
   "dependencies": {
     "config": "^1.30.0",
+    "dotenv": "^5.0.1",
+    "isomorphic-fetch": "^2.2.1",
+    "js-yaml": "^3.11.0",
     "netlify-lambda": "^0.3.0",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
