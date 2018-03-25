@@ -10,7 +10,7 @@ import data from "../data/latsAndLons.json";
 
 const MapWithAMarker = withScriptjs(withGoogleMap(props =>
   <GoogleMap
-    defaultZoom={8}
+    defaultZoom={13}
     defaultCenter={{ lat: 37.7749, lng: -122.4194 }}
   >
   {
