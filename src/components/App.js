@@ -32,7 +32,7 @@ function HitItem({ hit }) {
   console.log(hit);
   return (
     <div className='hit-item'>
-      <Highlight attribute="name" hit={hit} />
+      <Highlight className='title' attribute="name" hit={hit} />
       <div className='hit-name-sub'>
         {(hit.percent_full) ? <span className="hit-name-sub-capacity">Capacity {hit.percent_full}% </span> : <span className="hit-name-sub-capacity">Capacity</span> }
         <span className="hit-name-sub-attendance">Going {hit.yes_rsvp_count} </span>

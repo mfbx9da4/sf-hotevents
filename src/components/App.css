@@ -8,6 +8,7 @@ em {
 
 .App {
   text-align: center;
+  margin: 0 2rem;
 }
 
 .App-header {
@@ -25,20 +26,28 @@ em {
   font-size: large;
 }
 
+.container {
+}
+
 .ais-Hits-list {
   flex-direction: column;
+  margin-top: 1rem;
 }
 
 .ais-Hits-item {
   display: flex;
   width: 100%;
   box-shadow: none;
-  margin: 20px;
+  margin-top: 0px;
+  border: none;
+  padding: 0.5rem;
 }
 
+.title > span {
+  font-size: 1.2em !important;
+}
 .ais-Highlight {
   display: flex;
-  font-size: 1.3em;
   text-align: left;
   margin-bottom: 3px;
 
