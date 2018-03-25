@@ -2,6 +2,12 @@
 
 - Scrape meetup API, eventbrite and universe https://developers.universe.com/v2/reference#current-user
 
+## Lambda
+
+test with 
+
+    node test_lambda.js
+
 
 This project is based on [Create React App](https://github.com/facebookincubator/create-react-app). (For more information about Create react App, check their full [documentation](https://github.com/facebookincubator/create-react-app#create-react-app).)
 
