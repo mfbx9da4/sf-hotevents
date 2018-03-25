@@ -19,7 +19,6 @@ const MapWithAMarker = withScriptjs(withGoogleMap(props =>
 
       if(event.venue){
         return <Marker key={i}
-        label={event.percent_full + '%'}
         opacity={event.percent}
         position={{ lat: event.venue.lat, lng: event.venue.lon }} />
       } else {
