@@ -24,24 +24,24 @@ em {
   width: 50%;
 }
 
-.ais-Hits-list {
+.ais-InfiniteHits-list {
   flex-direction: column;
 }
 
-.ais-Hits-list:first-child {
+.ais-InfiniteHits-list:first-child {
   padding-top: 20px;
 }
 
-.ais-Hits-item {
+.ais-InfiniteHits-item {
   border: none;
   display: flex;
   width: 100%;
   box-shadow: none;
   margin-top: 0px;
-  margin-bottom: 15px;
+  /*margin-bottom*/: 15px;
 }
 
-.ais-Hits-item:hover {
+.ais-InfiniteHits-item:hover {
   background: #EEE;
   cursor: pointer;
 }
@@ -51,20 +51,20 @@ em {
   margin-bottom: 5px;
 }
 
-.ais-Highlight {
+/*.ais-Highlight {
   display: flex;
-  text-align: left;
   margin-bottom: 3px;
 
 }
-
-.ais-Highlight-Highlighted {
-  font-style: normal;
+*/
+.ais-Highlight-highlighted {
+  font-size: 1.2rem !important;
 }
 
 .hit-item {
   display: flex;
   flex-direction: column;
+  text-align: left;
 }
 
 .hit-name-sub {

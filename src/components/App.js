@@ -1,28 +1,39 @@
 import React, { Component } from 'react';
 import './App.css';
-import { InstantSearch, Hits, Highlight, SearchBox } from 'react-instantsearch/dom';
+import { InstantSearch, Hits, InfiniteHits, Highlight, SearchBox } from 'react-instantsearch/dom';
 import MapContainer from './MapContainer';
 import moment from 'moment';
 
 function timeDifference(date, time) {
-	return moment(date).format('MMMM Do, YYYY') + " @ " + moment(time).format("h:mma") + ` (${moment(time).fromNow()})`;
+  const day = moment(date).format('ddd, MMM Do,')
+	return  `${day} ${moment(time).format("h:mma")}`;
 }
 
-function HitItem({ hit }) {
-	return (
-		<div className='hit-item'>
-		  <Highlight className='title' attribute="name" hit={hit} />
-
-			<div className='hit-name-sub'>
-				{(hit.percent_full) ? <span className="hit-name-sub-capacity">Capacity {hit.percent_full}% </span> : <span className="hit-name-sub-capacity">Capacity</span> }
-				<span className="hit-name-sub-attendance">Going {hit.yes_rsvp_count} </span>
-				<span className="hit-name-sub-date">{timeDifference(hit.local_date, hit.time)} </span>
-			</div>
-		</div>
-	);
-}
 
 class App extends Component {
+  setIsHovered = (hit) => {
+    console.info('was called', hit);
+  }
+
+  hitItem = ({ hit }) => {
+    return (
+      <div className='hit-item' onClick={this.setIsHovered.bind(this, hit)}>
+        <div>
+          <span style={{fontSize: '1.3rem'}}>{hit.label} </span>
+          <a href={hit.link} target='_blank'>
+            <Highlight className='title' attribute="name" hit={hit} />
+          </a>
+        </div>
+
+        <div className='hit-name-sub'>
+          {(hit.percent_full) ? <span className="hit-name-sub-capacity">Capacity {hit.percent_full}% </span> : <span className="hit-name-sub-capacity">Capacity N/A</span> }
+          <span className="hit-name-sub-attendance">Going {hit.yes_rsvp_count} </span>
+          <span className="hit-name-sub-date">{timeDifference(hit.local_date, hit.time)} </span>
+        </div>
+      </div>
+    );
+  }
+
   render() {
     return (
       <div className="App">
@@ -37,8 +48,8 @@ class App extends Component {
         >
           <SearchBox />
           <div className="container">
-            <MapContainer></MapContainer>
-            <Hits hitComponent={HitItem} className="events-list"/>
+            <MapContainer />
+            <InfiniteHits hitComponent={this.hitItem} className="events-list"/>
           </div>
         </InstantSearch>
       </div>

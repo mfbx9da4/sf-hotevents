@@ -15,14 +15,22 @@ const MapWithAMarker = withScriptjs(withGoogleMap(props =>
 
   {
     props.children[1] && props.children[1].map(function(event, i){
-      // console.log("event", event);
+      // console.log("event", event.label);
+      // console.log("google", google);
+
+      let animation
+      if (window.google) {
+        animation = event.isHovered && window.google.maps.Animation.DROP
+      }
 
       if(event.venue){
         return <Marker key={i}
+        label={event.label.toString()}
+        animation={animation}
         opacity={event.percent}
         position={{ lat: event.venue.lat, lng: event.venue.lon }} />
       } else {
-      	return undefined;
+      	return null;
       }
     })
   }
