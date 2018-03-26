@@ -53,7 +53,7 @@ class MapView extends Component {
     const hits = this.props.searchResults && this.props.searchResults.results && this.props.searchResults.results.hits
     return <div>
       <MapWithAMarker
-      googleMapURL="https://maps.googleapis.com/maps/api/js?key=AIzaSyC4R6AN7SmujjPUIGKdyao2Kqitzr1kiRg&v=3.exp&libraries=geometry,drawing,places"
+      googleMapURL="https://maps.googleapis.com/maps/api/js?key=AIzaSyCtfDkcrjaVzct57ejFVmfixWq7-2Glg4A&v=3.exp&libraries=geometry,drawing,places"
       loadingElement={<div style={{ height: `100%` }} />}
       containerElement={<div style={{ height: `500px` }} />}
       mapElement={<div style={{ height: `100%` }} />}>
